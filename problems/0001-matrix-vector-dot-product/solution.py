@@ -3,4 +3,4 @@ def matrix_dot_vector(a: list[list[int|float]], b: list[int|float]) -> list[int|
     # If the number of columns in 'a' does not match the length of 'b', return -1.
     if len(a) != len(b):
         return -1
-    return [sum([a[i][j]*b[j] for j in range(len(b))]) for i in range(len(a))]
+    return [sum([a[i][j]*b[j] for j in range(len(a))]) for i in range(len(a))]
