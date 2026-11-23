@@ -13,10 +13,7 @@ def quotient_rule_derivative(g_coeffs: list, h_coeffs: list, x: float) -> float:
         The derivative value f'(x)
     """
     # Your code here
-    g = np.polyval(g_coeffs,x)
-    h = np.polyval(h_coeffs,x)
-    pd0 = np.polyder(g_coeffs)
-    pd1 = np.polyder(h_coeffs)
-    dg = np.polyval(pd0,x)
-    dh = np.polyval(pd1,x)
+    g,h = np.polyval(g_coeffs,x) ,  np.polyval(h_coeffs,x)
+    pd1,pd2 = np.polyder(g_coeffs),np.polyder(h_coeffs)
+    dg,dh = np.polyval(pd1,x),np.polyval(pd2,x)
     return (h*dg - g*dh)/(h**2)
